@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userInput = prompt("hoevaak wil jij het spelen?");
+        sessionStorage.setItem("pogingSpeler", userInput);
+     
+        let pogingSpeler = sessionStorage.getItem("pogingSpeler")
+        console.log(pogingSpeler);
+
+         
+
+         const eu = {"Italy":"Rome", "Luxembourg":"Luxembourg", "Belgium":"Brussels", "Denmark":"Copenhagen", "Finland":"Helsinki", 
+                  "France":"Paris", "Slovakia":"Bratislava", "Slovenia":"Ljubljana", "Germany":"Berlin", "Greece":"Athens", 
+                  "Ireland":"Dublin", "Netherlands":"Amsterdam", "Portugal": "Lisbon", "Spain":"Madrid", "Sweden":"Stockholm", 
+                  "United Kingdom":"London", "Cyprus":"Nicosia", "Lithuania":"Vilnius", "Czech Republic":"Prague", 
+                  "Estonia":"Tallin", "Hungary":"Budapest", "Austria":"Vienna", "Poland":"Warsaw"}
+
+
+                  let countries = Object.keys(eu);
+
+                  let score = 0;
+                  let poging = 0;
+                  poging = sessionStorage.getItem("poging");
+
+                  for(let i = 0; i < pogingSpeler; i++){
+            let random = Math.floor(Math.random() * countries.length);
+            
+            let land = countries[random];
+      
+            console.log( land, eu[land]);
+      
+            let result = prompt(`Wat is de hoofdstad van ${land}? 
+            Rome
+            Luxembourg
+            Brussels
+            Copenhagen
+            Helsinki
+            Paris
+            Bratislava
+            Ljubljana
+            Berlin
+            Athens
+            Dublin
+            Amsterdam
+            Lisbon
+            Madrid
+            Stockholm
+            London
+            Nicosia
+            Vilnius
+            Prague
+            Tallin
+            Budapest
+            Riga
+            Valetta
+            Vienna
+            Warsaw
+            `);
+      
+            if(result.toLowerCase() === eu[land].toLowerCase()){
+                alert("ja, je antwoord is goed !");
+                score++;
+                sessionStorage.setItem("score", score);
+            }
+            else{
+                alert("sorry, fout antwoord!")
+            }
+      
+            poging++;
+            sessionStorage.setItem("poging", poging);
+        }
+      
+        alert(`Jouw score: ${score} | Aantal pogingen: ${poging}`);
+        //sessionStorage.removeItem("poging");
+ 
+
+
+
+
+
+
+
+            
+             
+     
+        
+     </script>
+</body>
+</html>

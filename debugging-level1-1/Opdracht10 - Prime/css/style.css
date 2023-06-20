@@ -1,0 +1,38 @@
+html, body{
+    margin: 0 5px 0 5px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: medium;
+    margin: 0 0 5px 0;
+    padding: 8px;
+    background-color: #3f31fd;
+    color: white;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0dfdf;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 5px rgb(64, 64, 64, 0.1);
+}
+
+.container input{
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+}
+
+.container button, label{
+    margin: 10px;
+    font-weight: bolder;
+}
+
+
+

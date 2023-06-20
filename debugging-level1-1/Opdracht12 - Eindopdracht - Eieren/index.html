@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <title>Debugging - Opdracht 12 - Eieren</title>
+</head>
+<body>
+    <h1>Debugging - Opdracht 12 - Eieren</h1>
+    <div id="info">
+        <div id="player">Player1</div>
+        <div id="move">Move: 1</div>
+        <div id="points">Points: 0</div>
+    </div>
+    <div id="container">
+        <div class="box box1" onclick="currentBoard.registerClick(1)">1</div>
+        <div class="box box2" onclick="currentBoard.registerClick(2)">2</div>
+        <div class="box box3" onclick="currentBoard.registerClick(3)">3</div>
+        <div class="box box4" onclick="currentBoard.registerClick(4)">4</div>
+        <div class="box box5" onclick="currentBoard.registerClick(5)">5</div>
+        <div class="box box6" onclick="currentBoard.registerClick(6)">6</div>
+        <div class="box box7" onclick="currentBoard.registerClick(7)">7</div>
+        <div class="box box8" onclick="currentBoard.registerClick(8)">8</div>
+        <div class="box box9" onclick="currentBoard.registerClick(9)">9</div>
+    </div>
+    <button id="resetbutton" onClick="currentBoard.resetBoard()">New game</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
